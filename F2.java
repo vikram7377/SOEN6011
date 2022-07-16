@@ -12,7 +12,13 @@ public class F2 {
 		return x;
 	}
 	
-
+	public static double reducesAnguleTaxX(double x) {
+		x = x % 360;
+		x = x > 180 ? x - 180 : x;
+		x = x < 0 ? 180 + x : x;
+		return x;
+	}
+	
 	public static String getTanX(String value) {
 		try {
 			double x = Double.parseDouble(value);
